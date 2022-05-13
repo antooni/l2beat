@@ -15,7 +15,7 @@ export class BlockNumberRepository {
   async add(record: BlockNumberRecord) {
     const row = toRow(record)
     await this.knex('block_numbers').insert(row)
-    this.logger.debug({ method: 'add', ...row })
+    this.logger.info({ method: 'add', ...row })
   }
 
   async getAll(): Promise<BlockNumberRecord[]> {

@@ -46,7 +46,7 @@ export class ReportRepository {
       .onConflict(['block_number', 'bridge_address', 'asset_id'])
       .merge()
 
-    this.logger.debug({ method: 'addOrUpdate', amount: rows.length })
+    this.logger.info({ method: 'addOrUpdate', amount: rows.length })
   }
 
   async deleteAll() {
