@@ -8,7 +8,6 @@ try {
 //   const app = new Application(config)
 //   app.start()
   console.log('data.json was generated')
-  return 0
 } catch (e) {
   console.error(e)
   process.exit(1)
